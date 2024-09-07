@@ -1,0 +1,513 @@
+body {
+    font-family: "Prompt", sans-serif;
+    margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.card {
+    flex-grow: 0;
+    width: 363px;
+    height: 519px;
+    min-width: 300px;
+    background: #fff;
+    border-radius: 20px;
+    margin: 25px;
+    min-height: 356px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.08);
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    padding: 10px;
+}
+
+.card:hover {
+    transform: translate(0, -10px);
+    box-shadow: 0px 17px 35px 0px rgba(0, 0, 0, 0.07);
+}
+
+.card:nth-child(1) {
+    background-image: url('img/Background (2).png');
+}
+
+.card:nth-child(2) {
+    background-image: url('img/Background (3).png');
+}
+
+.card:nth-child(3) {
+    background-image: url('img/Background (4).png');
+}
+
+.card:nth-child(4) {
+    background-image: url('img/Background (5).png');
+}
+
+.card:nth-child(5) {
+    background-image: url('img/Background (6).png');
+}
+
+.card:nth-child(6) {
+    background-image: url('img/Background (7).png');
+}
+
+.card:nth-child(7) {
+    background-image: url('img/Background (8).png');
+}
+
+.card:nth-child(8) {
+    background-image: url('img/Group 57.png');
+}
+
+.card:nth-child(9) {
+    background-image: url('img/Background (9).png');
+}
+
+.transparent-card {
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: none;
+    width: 100px;
+    height: 400px;
+    transition: all 0.3s ease;
+}
+
+.transparent-card:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.card-text {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 10px;
+}
+
+.icon-button {
+    background-color: #6C151A;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.icon-button i {
+    color: #f44336;
+    font-size: 24px;
+}
+
+.icon-button:hover {
+    background-color: #f44336;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.icon-button:hover i {
+    color: #fff;
+}
+
+.card-text .card-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.card-text .text-content {
+    text-align: left;
+    color: #fff;
+}
+
+.card-text .text-content h2,
+.card-text .text-content p {
+    margin: 0;
+}
+
+.card-text .text-content h2 {
+    font-size: 20px;
+    color: #000;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.card-text .text-content p {
+    font-size: 15px;
+    font-weight: 400;
+    color: #1d1d1d;
+}
+
+.card h4 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 15px;
+}
+
+.card i {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 15px;
+    font-size: 1.4rem;
+    line-height: 3.2rem;
+}
+
+.card .card-text {
+    padding: 20px;
+}
+
+p {
+    font-size: .8rem;
+    opacity: .6;
+    margin-top: 10px;
+}
+
+.card .card-img {
+    transform: translate(90px, -10px);
+    margin: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .35s ease-out;
+}
+
+.card img {
+    height: 180px;
+}
+
+.card img.blur {
+    position: absulute;
+    filter: blur(15px);
+    z-index: -1;
+    opacity: .40;
+    transform: translate(-160px, 30px);
+    transition: all .35s ease-out;
+}
+
+.card:hover .card-img {
+    transform: translate(70px, -15px);
+}
+
+.card:hover .card-img img.blur {
+    transform: translate(-100px, 35px) scale(.85);
+    opacity: .25;
+    filter: blur(20px);
+}
+
+.card-content {
+    display: flex;
+    justify-content: start;
+    width: 100vw;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 0 20px;
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+.card-content::-webkit-scrollbar {
+    height: 0px;
+}
+
+.card-content:after {
+    content: '';
+    display: block;
+    min-width: 20px;
+    height: 100px;
+    position: relative;
+}
+
+.btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #CECECE;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-family: 15px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    margin: 5px;
+    transition: all 0.25s ease;
+    z-index: 10;
+}
+
+#prev, #next {
+    position: absolute;
+    bottom: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: #CECECE;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    z-index: 10;
+}
+
+#next {
+    right: 40px;
+}
+
+#prev {
+    right: 100px;
+}
+
+.btn:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.btn i {
+    font-size: 24px;
+    color: #000;
+}
+
+.slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 90px;
+}
+
+.slider::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 95%;
+    background-color: #F6F7F6;
+    z-index: -1;
+}
+
+.slider::after {
+    content: '';
+    position: absolute;
+    top: 5%;
+    right: 0;
+    width: 55%;
+    height: 100%;
+    background-image: url('img/Group 388.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.slider-text {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 5%;
+    z-index: 1;
+}
+
+.left-text {
+    text-align: left;
+    margin-top: 10px;
+    color: #000;
+}
+
+.right-text {
+    position: absolute;
+    right: 5%;
+    top: 9%;
+    text-align: left;
+    color: #fff;
+    z-index: 1;
+    width: 45%;
+    padding-left: 20px;
+}
+
+.left-text h1 {
+    font-size: 100px;
+    margin: 0;
+    font-weight: 500;
+    color: #5D5D5E;
+}
+
+.slider-text p {
+    font-size: 18px;
+    font-weight: 300;
+    color: #ffffff;
+}
+
+#free-consult {
+    position: absolute;
+    left: 45%;
+    margin-left: 50px;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 50px;
+    padding: 5px 20px;
+    font-size: 16px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 1;
+    border: none;
+    outline: none;
+    transition: all 0.25s ease;
+    width: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Prompt", sans-serif;
+}
+
+#free-consult i {
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+#free-consult:hover {
+    background-color: #6C151A;
+    color: #fff;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+@media (max-width: 767px) {
+    .card-content .free-consult {
+        display: none;
+    }
+    .card-content .free-consult {
+        display: none;
+    }
+
+    /* ซ่อนการ์ดที่มีคลาส transparent-card ในโหมดมือถือ */
+    .transparent-card {
+        display: none;
+    }
+    .card-content {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory; /* กำหนดให้เลื่อนในแนวนอน */
+        scroll-padding: 0; /* ให้ padding ของ snap ตรงกลางหน้าจอ */
+        gap: 20px; /* เว้นระยะห่างระหว่างการ์ด */
+      }
+    
+      .card {
+        scroll-snap-align: center; /* ให้การ์ดอยู่ตรงกลาง */
+        flex: 0 0 auto; /* ให้การ์ดมีขนาดตามเนื้อหา */
+      }
+    
+      .card-content::-webkit-scrollbar {
+        display: none; /* ซ่อน scrollbar ในโหมดมือถือ */
+      }
+    .slider::after {
+        width: 20%;
+    }
+
+    .card {
+        width: calc(50% - 20px);
+     
+        margin: 10px;
+    }
+
+    .card-content {
+        display: flex;
+        padding: 0 10px;
+        gap: 10px;
+    }
+
+    #prev, #next {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+
+    .slider-text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .left-text {
+        text-align: left;
+        margin-bottom: 10px; 
+    }
+
+    #prev {
+        right: 90px;
+    }
+    .right-text {
+        position: static;
+        width: 100%;      
+        text-align: left; 
+        padding-left: 0;   
+        margin-top: 10px;  
+        width: 60%;
+        margin-top: -10px;
+    }
+
+    .right-text br {
+        display: none;
+    }
+
+    .right-text p {
+        color: #848A8A;
+    }
+
+    .left-text h1 {
+        font-size: 54px;
+    }
+
+    #free-consult {
+        position: relative;
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        width: auto;
+        margin-top: 20px;
+        background-color: #ffffff;
+        color: #000;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 50px;
+        border: none;
+        outline: none;
+        left: 0;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        margin-left: 0;
+    }
+    
+    #free-consult span {
+        font-size: 20px;
+        margin-left: 10px;
+    }
+    
+}
